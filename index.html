@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos de Bimestres</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f8;
+            color: #4b4b4b;
+        }
+
+        h1, h3 {
+            text-align: center;
+            color: #001f3f;
+        }
+
+        /* Estilo del menú */
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #001f3f;
+            padding: 10px 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .menu a {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #0074D9;
+            color: #ffffff;
+        }
+
+        .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Estilos para dispositivos móviles */
+        @media (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 10px;
+                background-color: #001f3f;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            .nav-links a {
+                padding: 10px 20px;
+                border-top: 1px solid #4b4b4b;
+                width: 100%;
+                text-align: left;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+        }
+
+        /* Estilo de los bimestres */
+        .bimestre {
+            display: none;
+            margin: 20px;
+            text-align: center;
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .bimestre.active {
+            display: block;
+        }
+
+        .nav-links a.active {
+            color: #0074D9;
+            font-weight: bold;
+        }
+
+        /* Estilo de los videos */
+        .video-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        @media (min-width: 769px) {
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <span class="menu-icon" onclick="toggleMenu()">☰</span>
+        <div class="nav-links" id="navLinks">
+            <a href="#bimestre1" onclick="mostrarBimestre('bimestre1')">Bimestre 1</a>
+            <a href="#bimestre2" onclick="mostrarBimestre('bimestre2')">Bimestre 2</a>
+            <a href="#bimestre3" onclick="mostrarBimestre('bimestre3')">Bimestre 3</a>
+            <a href="#bimestre4" onclick="mostrarBimestre('bimestre4')">Bimestre 4</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Bimestre 1 -->
+        <section class="bimestre active" id="bimestre1">
+            <h3>Bimestre 1</h3>
+            <div class="video-grid">
+                <div>
+                    <h4>Título del Video 1</h4>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/ID_VIDEO_1" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <h4>Título del Video 2</h4>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/ID_VIDEO_2" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bimestre 2 -->
+        <section class="bimestre" id="bimestre2">
+            <h3>Bimestre 2</h3>
+            <div class="video-grid">
+                <!-- Sección con seis videos de ejemplo -->
+                <div>
+                    <h4>B2 15 Dios ama las multitudes</h4>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/IEWpm4Uehsg?si=5w239wtNiQKQQ3OH" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <h4> B2 16 Trabajando por multitudes</h4>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/pyOVQp9JS_U?si=XVjlLiWQkdIUNbSJ" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <h4>B2 17 Modelo de Jesus 1</h4>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/WsfvIP49vSo?si=PS2Buykvs792Zg3_" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <h4>B2 18 Modelo de Jesus 2</h4>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/9xPcZ3yk-TE?si=0MrHg-Vrk8uokOL0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <h4>Título del Video 5</h4>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/ID_VIDEO_7" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <h4>Título del Video 6</h4>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/ID_VIDEO_8" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bimestre 3 y Bimestre 4 (similar al Bimestre 1 con 2 videos cada uno) -->
+        <!-- Código adicional omitido para mantener el ejemplo conciso -->
+    </div>
+
+    <script>
+        function mostrarBimestre(bimestreId) {
+            document.querySelectorAll('.bimestre').forEach(section => section.classList.remove('active'));
+            document.getElementById(bimestreId).classList.add('active');
+        }
+
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
